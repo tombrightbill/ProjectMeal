@@ -1,8 +1,8 @@
-class CreateTypSubcategories < ActiveRecord::Migration
+class CreateTypSubcategory < ActiveRecord::Migration
   def change
     create_table :typ_subcategories do |t|
-
-      t.timestamps null: false
+    	t.string :name
+    	t.belongs_to :typ_category
     end
   end
 end
